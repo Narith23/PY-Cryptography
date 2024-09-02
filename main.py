@@ -60,7 +60,8 @@ expiration_date = datetime.now() + timedelta(minutes=5)
 expiration_date = expiration_date.timestamp()
 
 data = dict(
-    fields="values",
+    doc_id=123,
+    file_id=456,
     expiration_date=expiration_date,
 )
 print(f"Data: {data}")
