@@ -33,7 +33,7 @@ def decrypt_data(encrypted_data: str) -> dict:
     # Check if expiration_date is in the past
     current_time = datetime.now()
     if expiration_date < current_time:
-        return "Error: The data has expired."
+        return "The data has expired."
 
     return decrypted_data
 
@@ -54,7 +54,7 @@ print("==============================================")
 print("")
 
 # Expiration date is the current date plus 1 minute
-expiration_date = datetime.today() + timedelta(minutes=5)
+expiration_date = datetime.now() + timedelta(minutes=5)
 
 # Remove microseconds
 expiration_date = expiration_date.timestamp()
